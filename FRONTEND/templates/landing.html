@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidor de apis</title>
+  </head>
+  <body>
+    <h1>
+      Esta es la página principal para el ejercicio de uso de APis en Flask
+    </h1>
+    <!-- Formulario para enviar texto -->
+    <form action="/" method="POST">
+      <label for="texto_entrante">Ingresa tu texto:</label>
+      <input type="text" id="texto_entrante" name="texto_entrante" required />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Mostrar el texto ingresado (opcional) -->
+    {% if texto_entrante %}
+    <h2>Texto enviado:</h2>
+    <p>{{ texto_entrante }}</p>
+    {% endif %}
+  </body>
+</html>
